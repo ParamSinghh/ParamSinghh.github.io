@@ -434,3 +434,12 @@ footer {
 footer p {
   text-align: center;
 }
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.project-card-link:hover .color-container {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
