@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku SAT Solver - Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <style>
+    /* Project-page-specific styles */
+    .project-page {
+      max-width: 800px;
+      margin: 60px auto 40px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .project-page h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .project-page h2 {
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .project-description ul {
+      padding-left: 20px;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .project-page {
+        margin: 40px 10px;
+      }
+
+      .project-page h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Paramveer Singh</div>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="project-page">
+    <h1>Sudoku SAT Solver</h1>
+
+    <p class="project-description">
+      Puzzluoku is an advanced SAT-based solver for Sudoku puzzles, combining algorithmic logic with a user-friendly interface.
+      It is designed to handle complex puzzles efficiently while providing an engaging, minimalist experience for users.
+    </p>
+
+    <h2>Introduction & Background</h2>
+    <p class="project-description">
+      In the evolving field of digital solutions for logic-based entertainment, the intersection of user-friendly software and sophisticated
+      computational algorithms presents a significant opportunity for innovation. My dissertation introduces "Puzzluoku," an application designed
+      to transform the experience of solving Sudoku puzzles through a SAT solver. This software is not merely a utility for automating puzzle
+      solving but a comprehensive platform aimed at enhancing user interaction with one of the most popular puzzles globally. The initiative
+      behind Puzzluoku is rooted in a dual objective: to simplify the resolution of puzzles through advanced algorithmic support and to enrich the
+      user experience by offering an intuitive and interactive interface.
+    </p>
+
+    <h2>Problem Statement and Project Motivation</h2>
+    <p class="project-description">
+      Sudoku puzzles challenge solvers to fill a grid with digits under strict constraints. Traditional methods, either manual or generic solvers,
+      do not cater to nuanced variations of Sudoku that enthusiasts often encounter. Puzzluoku addresses these gaps by providing a tailored,
+      efficient, and engaging solution that appeals to a broad spectrum of Sudoku enthusiasts, from novices to seasoned experts.
+    </p>
+
+    <h2>Programming Choice</h2>
+    <p class="project-description">
+      The code for the "Puzzluoku" Sudoku solver project is written in C#. This choice provides a robust and versatile environment with
+      strong support for object-oriented programming, a rich set of libraries for data structures and logical operations, and excellent
+      debugging tools within Visual Studio. It also integrates well with the .NET framework for creating intuitive user interfaces.
+    </p>
+
+    <h2>Background: Sudoku and Computational Complexity</h2>
+    <p class="project-description">
+      Sudoku is a logic-based number placement puzzle that has captured interest for its mathematical structure and computational complexity.
+      Sudoku is NP-complete, meaning there is no known polynomial-time algorithm to solve every puzzle, and solving general Sudoku can be
+      reduced to the 3-SAT problem. This makes the problem theoretically and practically challenging.
+    </p>
+
+    <h2>Algorithmic Approaches to Solving Sudoku</h2>
+    <p class="project-description">
+      Given its NP-completeness, various strategies exist: backtracking, brute-force, constraint propagation, and SAT solver adaptations.
+      Puzzluoku transforms Sudoku into a SAT problem using polynomial 3-SAT reduction, where each cell is a Boolean variable and each clause
+      represents constraints, enabling SAT solvers to efficiently tackle even challenging puzzles.
+    </p>
+
+    <h2>Relevant Research</h2>
+    <p class="project-description">
+      The project draws from multiple studies including:
+    </p>
+    <ul class="project-description">
+      <li>Ant Colony Optimization (ACO) applied to NP-complete problems</li>
+      <li>Backtracking, simulated annealing, and alternating projection methods</li>
+      <li>Polynomial 3-SAT reduction and SAT encodings for Sudoku</li>
+      <li>Heuristic solutions and advanced SAT solving techniques for difficult puzzles</li>
+      <li>Tools like SUDOKUSAT for classifying puzzle difficulty</li>
+    </ul>
+
+    <h2>Sudoku as a SAT Problem</h2>
+    <p class="project-description">
+      Sudoku puzzles can be represented as SAT problems by encoding each cell as a Boolean variable and each constraint as clauses in a
+      Boolean formula. Minimal and extended encodings optimize solver efficiency, with complex puzzles benefiting from additional clauses
+      that improve performance. This approach allows advanced SAT techniques—like clause learning and heuristic-based variable selection—to
+      solve difficult puzzles efficiently.
+    </p>
+
+    <div class="btn-container">
+      <button class="btn btn-color-2" onclick="location.href='https://github.com/ParamSinghh/Sat-Solver'">
+        Github
+      </button>
+      <button class="btn btn-color-2" onclick="location.href='https://paramsinghh.github.io/assets/Dissertation.pdf'">
+        Paper PDF
+      </button>
+    </div>
+
+    <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
