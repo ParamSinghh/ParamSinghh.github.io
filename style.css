@@ -740,3 +740,40 @@ section {
   padding: 1rem 0;      /* increase clickable area */
   font-size: 1.25rem;   /* adjust for mobile */
 }
+
+
+/* =========================
+   CENTER BUTTONS AND SOCIALS
+========================= */
+
+/* Buttons container */
+.btn-container {
+  display: flex;
+  justify-content: center;  /* horizontally center */
+  align-items: center;      /* vertically align if multi-line */
+  gap: 1.5rem;              /* spacing between buttons */
+  flex-wrap: wrap;          /* wrap on very small screens */
+  margin-bottom: 1.5rem;
+}
+
+/* Social icons container */
+#socials-container {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;
+  gap: 1.5rem;              /* spacing between icons */
+  margin-top: 0.5rem;
+}
+
+/* Fix icons aspect ratio */
+#socials-container .icon {
+  width: auto;
+  height: 3rem;             /* adjust size as needed */
+  max-width: 3rem;
+  object-fit: contain;
+}
+
+/* Optional: keep buttons same size */
+.btn {
+  min-width: 8rem;          /* ensures equal width */
+}
