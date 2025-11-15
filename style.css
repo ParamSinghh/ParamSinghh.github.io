@@ -540,10 +540,9 @@ footer p {
    MOBILE / TABLET RESPONSIVE STYLES
 ============================= */
 
-/* GENERAL FLEX & IMAGE SCALING */
+/* GENERAL FLEX & IMAGE SCALING
 .section__pic-container,
-.about-pic,
-.project-img {
+.about-pic {
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -598,7 +597,7 @@ section {
     width: 60%;
     max-width: 300px;
   }
-}
+} 
 
 /* ======= 900px breakpoint (projects wrap) ======= */
 @media screen and (max-width: 900px) {
@@ -776,4 +775,48 @@ section {
 /* Optional: keep buttons same size */
 .btn {
   min-width: 8rem;          /* ensures equal width */
+}
+/* Hamburger menu styles */
+#hamburger-nav {
+  display: none; /* desktop hides it by default */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 101; /* ensure clickable */
+}
+
+.menu-links {
+  position: absolute;
+  top: 60px; /* below the navbar */
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  transition: max-height 0.3s ease-in-out;
+  list-style: none;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-links.open {
+  max-height: 400px; /* adjust if more links */
+}
+
+.menu-links li a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
 }
