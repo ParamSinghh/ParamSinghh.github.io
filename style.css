@@ -136,12 +136,6 @@ a:hover {
   padding: 0.5rem;
 }
 
-.menu-links a:hover {
-  background: #f3f4f6;
-  color: #111827;
-  text-decoration: none;
-}
-
 body.menu-open {
   overflow: hidden;
 }
@@ -382,12 +376,6 @@ article {
   transition: all 0.2s ease-in-out;
 }
 
-article:hover {
-  background: black;
-  color: white;
-  transform: translateY(-5px);
-}
-
 article .icon {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
@@ -434,16 +422,6 @@ article .icon {
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 26px 50px rgba(15, 23, 42, 0.14);
-  border-color: rgba(14, 165, 233, 0.35);
-}
-
-.project-card:hover::before {
-  opacity: 1;
 }
 
 .project-image-wrap {
@@ -509,11 +487,8 @@ article .icon {
   background: rgba(255, 255, 255, 0.75);
 }
 
-.project-btn:hover {
-  background-color: #111827;
-  border-color: #111827;
-  color: white;
-  transform: translateY(-3px);
+.project-btn:active {
+  transform: translateY(1px);
 }
 
 
@@ -882,4 +857,42 @@ section {
   height: 3rem;
   max-width: 3rem;
   object-fit: contain;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu-links a:hover {
+    background: #f3f4f6;
+    color: #111827;
+    text-decoration: none;
+  }
+
+  article:hover {
+    background: black;
+    color: white;
+    transform: translateY(-5px);
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 26px 50px rgba(15, 23, 42, 0.14);
+    border-color: rgba(14, 165, 233, 0.35);
+  }
+
+  .project-card:hover::before {
+    opacity: 1;
+  }
+
+  .project-btn:hover {
+    background-color: #111827;
+    border-color: #111827;
+    color: white;
+    transform: translateY(-3px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  article:active,
+  .project-card:active {
+    transform: none;
+  }
 }
