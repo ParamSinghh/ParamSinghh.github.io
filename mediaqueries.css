@@ -99,7 +99,7 @@
 
   #hamburger-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 1.25rem;
     position: fixed;
@@ -113,8 +113,23 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.45);
   }
 
+  #hamburger-nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 7rem);
+    text-align: center;
+    font-size: 1.55rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .hamburger-menu {
-    position: relative;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   #hamburger-nav .menu-links {
@@ -146,7 +161,7 @@
   #hamburger-nav .menu-links.open {
     max-height: 100vh;
     min-height: 100vh;
-    padding: 5rem 1.5rem 2rem;
+    padding: 5.5rem 1.5rem 2rem;
     opacity: 1;
     transform: translateY(0) scale(1);
     pointer-events: auto;
@@ -154,7 +169,7 @@
 
   #hamburger-nav .menu-links li {
     width: 100%;
-    max-width: 20rem;
+    max-width: 18.5rem;
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 0.35s ease, transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
@@ -527,6 +542,15 @@
 
   #hamburger-nav {
     padding: 0.9rem 1rem;
+  }
+
+  #hamburger-nav .logo {
+    width: calc(100% - 6.25rem);
+    font-size: 1.32rem;
+  }
+
+  .hamburger-menu {
+    right: 1rem;
   }
 
   #hamburger-nav .menu-links.open {
