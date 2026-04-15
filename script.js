@@ -13,6 +13,7 @@ function toggleMenu(forceOpen) {
   icon.classList.toggle("open", shouldOpen);
   icon.setAttribute("aria-expanded", String(shouldOpen));
   icon.setAttribute("aria-label", shouldOpen ? "Close navigation menu" : "Open navigation menu");
+  document.body.classList.toggle("menu-open", shouldOpen);
 }
 
 document.addEventListener("click", (event) => {
@@ -27,6 +28,12 @@ document.addEventListener("click", (event) => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1200) {
+    toggleMenu(false);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
     toggleMenu(false);
   }
 });

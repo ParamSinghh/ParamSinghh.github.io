@@ -142,6 +142,10 @@ a:hover {
   text-decoration: none;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(7px, 7px);
 }
